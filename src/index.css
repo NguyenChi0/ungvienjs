@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+@import "tailwindcss";
+
+/* Montserrat là font mặc định cho utilities (font-sans) và toàn app */
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background: #f1f5f9;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #root {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: #f1f5f9;
+    color: #0f172a;
+    overflow-y: scroll;
+  }
+
+  #root {
+    margin: 0;
+    min-height: 100%;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.partner-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.partner-marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 14px;
+  animation: partner-marquee-rtl 42s linear infinite;
+}
+
+.partner-logo-card {
+  flex: 0 0 auto;
+  width: 170px;
+  height: 76px;
+  border-radius: 8px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.partner-logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes partner-marquee-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Chỉ animate trên desktop — tránh lệch trái / tràn chữ trên mobile */
+@media (min-width: 1024px) {
+  .banner-item-rise {
+    animation: banner-item-rise-up 900ms ease-out both;
+  }
+
+  .banner-copy-rise {
+    animation: banner-copy-rise-up 900ms ease-out both;
+  }
+}
+
+@keyframes banner-item-rise-up {
+  from {
+    opacity: 0;
+    transform: translate(170px, 70px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(170px, 0);
+  }
+}
+
+@keyframes banner-copy-rise-up {
+  from {
+    opacity: 0;
+    transform: translate(-75px, 70px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-75px, 0);
+  }
+}
+
+/* Mask blend ảnh người với nền — chỉ desktop (mobile hiển thị ảnh đầy đủ, không cắt) */
+@media (min-width: 1024px) {
+  .banner-foreground-img {
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.7) 18%, #000 38%);
+    mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.7) 18%, #000 38%);
+  }
+}
