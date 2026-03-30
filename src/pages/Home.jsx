@@ -21,6 +21,8 @@ import partner13 from "../assets/partner-13.png";
 import partner14 from "../assets/partner-14.png";
 import partner15 from "../assets/partner-15.png";
 import partner16 from "../assets/partner-16.png";
+import partner17 from "../assets/partner-17.png";
+import partner18 from "../assets/partner-18.png";
 import stepImg1 from "../assets/step1.png";
 import stepImg2 from "../assets/step2.png";
 import stepImg3 from "../assets/step3.png";
@@ -44,8 +46,8 @@ const partnerHighlightLogos = [
   partner14,
   partner15,
   partner16,
-  partner1,
-  partner2,
+  partner17,
+  partner18,
 ];
 const jobs = [
   { icon: "building", title: "STAFF SERVICE - Kỹ sư thiết kế cơ khí", company: "Staff Service Engineering", desc: "Top 3 công ty phái cử lớn tại Nhật tuyển kỹ sư thiết kế cơ khí...", location: "Tokyo, Japan", type: "Full-time", level: "N3+", salary: "250,000" },
