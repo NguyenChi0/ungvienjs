@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import RevealOnScroll from "../components/RevealOnScroll";
 import bannerImg from "../assets/banner.png";
 import cvAiImg from "../assets/cv_ai.png";
 import bannerItem1 from "../assets/banner_item1.png";
@@ -240,7 +241,7 @@ export default function HomeTailwind() {
           </div>
         </section>
 
-        <section className={sectionSpacing}>
+        <RevealOnScroll as="section" className={sectionSpacing}>
           <h2 className={`${sectionTitleClass} mb-6`}>Về chúng tôi</h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-6">
             {[
@@ -268,9 +269,9 @@ export default function HomeTailwind() {
               </article>
             ))}
           </div>
-        </section>
+        </RevealOnScroll>
 
-        <section className={sectionSpacing}>
+        <RevealOnScroll as="section" className={sectionSpacing}>
           <h2 className={`${sectionTitleClass} mb-[18px]`}>
             Hơn 18 đối tác doanh nghiệp Nhật
             <br className="hidden sm:block" /> đang tìm kiếm nhân sự nước ngoài
@@ -280,9 +281,9 @@ export default function HomeTailwind() {
             <div className="absolute top-3 bottom-0 w-14 pointer-events-none z-[2] left-0" style={{ background: "linear-gradient(to right, #ffffff 0%, transparent 100%)" }} />
             <div className="absolute top-3 bottom-0 w-14 pointer-events-none z-[2] right-0" style={{ background: "linear-gradient(to left, #ffffff 0%, transparent 100%)" }} />
           </div>
-        </section>
+        </RevealOnScroll>
 
-        <section className={sectionSpacing}>
+        <RevealOnScroll as="section" className={sectionSpacing}>
           <h2 className={`${sectionTitleClass} mb-[18px]`}>Hơn 200 việc làm đang tìm kiếm nhân sự kỹ sư</h2>
           <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 lg:grid-cols-3">
             {jobs.map((job, i) => (
@@ -314,9 +315,9 @@ export default function HomeTailwind() {
             ))}
           </div>
           <div className="mt-[18px] flex justify-center"><Link to="/jobs" className="text-[#1848a0] rounded-[10px] py-2.5 px-4 font-semibold no-underline">Xem tất cả việc làm →</Link></div>
-        </section>
+        </RevealOnScroll>
 
-        <section className="mt-6 w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] bg-[#1848a0] px-4 py-6 text-white sm:px-[max(18px,calc((100vw-1120px)/2+20px))]">
+        <RevealOnScroll as="section" className="mt-6 w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] bg-[#1848a0] px-4 py-6 text-white sm:px-[max(18px,calc((100vw-1120px)/2+20px))]">
           <div className="mx-auto max-w-[1120px]">
             <h3 className="m-0 text-[1.25rem] font-semibold leading-tight sm:text-[1.5rem] md:text-[30px]">Tìm kiếm việc làm phù hợp</h3>
 
@@ -351,9 +352,9 @@ export default function HomeTailwind() {
               </button>
             </div>
           </div>
-        </section>
+        </RevealOnScroll>
 
-        <section className={`grid grid-cols-1 items-center gap-6 lg:grid-cols-[1.2fr_1fr] lg:gap-5 ${sectionSpacing}`}>
+        <RevealOnScroll as="section" className={`grid grid-cols-1 items-center gap-6 lg:grid-cols-[1.2fr_1fr] lg:gap-5 ${sectionSpacing}`}>
           <div className="w-full overflow-hidden rounded-xl">
             <img src={cvAiImg} alt="CV tối ưu bằng AI" className="block w-full object-cover" />
           </div>
@@ -370,9 +371,9 @@ export default function HomeTailwind() {
               </Link>
             </div>
           </div>
-        </section>
+        </RevealOnScroll>
 
-        <section className={sectionSpacing}>
+        <RevealOnScroll as="section" className={sectionSpacing}>
           <h2 className={`${sectionTitleClass} mb-8 sm:mb-10`}>Quy trình ứng tuyển (Step-by-Step)</h2>
           {/*
             Grid 5 ô (3 thẻ + 2 mũi tên): mọi ô cùng hàng kéo theo chiều cao ô cao nhất →
@@ -398,9 +399,9 @@ export default function HomeTailwind() {
               return cells;
             })}
           </div>
-        </section>
+        </RevealOnScroll>
 
-        <section className={sectionSpacing}>
+        <RevealOnScroll as="section" className={sectionSpacing}>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <h2 className={sectionTitleClass}>Tin tức mới nhất</h2>
             <Link
@@ -435,9 +436,9 @@ export default function HomeTailwind() {
               </article>
             ))}
           </div>
-        </section>
+        </RevealOnScroll>
 
-        <section className={sectionSpacing}>
+        <RevealOnScroll as="section" className={sectionSpacing}>
           <h2 className={sectionTitleClass}>Ứng viên nói gì về chúng tôi?</h2>
           <p className="mb-[18px] mt-2.5 text-center text-[17px] text-[#9ca3af] sm:text-[22px] md:text-[26px]">
             Hàng nghìn ứng viên đã tìm việc thành công cùng JobShare
@@ -460,7 +461,7 @@ export default function HomeTailwind() {
               </article>
             ))}
           </div>
-        </section>
+        </RevealOnScroll>
       </main>
       <Footer />
     </div>
